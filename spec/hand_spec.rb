@@ -13,6 +13,9 @@ describe Hand, '#initialize' do
     expect{Hand.new("9H")}.to raise_error(ArgumentError)
     expect{Hand.new("2H,3H,4H,5H,6H,7H")}.to raise_error(ArgumentError)
   end
+  it "cannot be initialized with a value other than strings and cards" do
+    expect{Hand.new("2H","3H","4H",Card.new("9H"),0)}.to raise_error(ArgumentError)
+  end
 end
 describe Hand, '#category' do
   it "recognizes high_card" do

@@ -23,11 +23,13 @@ class Hand
       raise ArgumentError, "A hand must consist of 5 cards, you provided #{args.size}: #{args.inspect}"
     end
     @cards = []
-    args.each do |arg|
+    args.each_with_index do |arg,i|
       if arg.is_a?(String) || arg.is_a?(Hash)
         @cards << Card.new(arg)
       elsif arg.is_a?(Card)
         @cards << arg
+      else
+        raise ArgumentError, "argument #{i+1}: #{arg} cannot be treated as a card"
       end
     end
     @cards = @cards.uniq.sort
