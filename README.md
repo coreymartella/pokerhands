@@ -10,11 +10,12 @@ Ruby code representing recognition and comparison of [Poker Hands](http://en.wik
 
 ## Setup
 
-To setup the dependencies run:
+To download the code, install bundler and setup the dependencies run:
 
-`bundle`
+`git clone https://github.com/coreymartella/pokerhands.git ; cd pokerhands ; bundle`
 
-You'll need ruby setup with bundler (`gem install bundler` if you don't have it)
+
+You'll need ruby 1.9+ setup with bundler (`gem install bundler` or `sudo gem install bundler` if you don't have it). If you don't have ruby already its likely you're on windows in which case http://rubyinstaller.org/ is your best bet.
 
 ## Testing
 
