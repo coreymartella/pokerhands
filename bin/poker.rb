@@ -6,6 +6,7 @@ if ARGV.size == 1 && ARGV[0] =~ /-*h(elp)?/
   exit
 end
 
+#instantiate the hands from the arguments
 hand1 = Hand.new(ARGV[0])
 hand2 = Hand.new(ARGV[1])
 result = Hand.winner(hand1, hand2)
