@@ -35,9 +35,6 @@ class Card
     return false unless other.is_a?(Card)
     other.rank == rank && other.suit == suit
   end
-  def eql?(other)
-    self == other
-  end
   def hash
     to_s.hash
   end
